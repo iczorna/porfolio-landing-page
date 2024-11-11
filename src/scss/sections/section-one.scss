@@ -1,0 +1,16 @@
+.page__section--one{
+    background: linear-gradient(252.94deg, #FFEE32 -13.48%, #D6D6D6 125.48%);
+    padding: 353px 0 119px 191px;
+
+    @media screen and (min-width: 320px) and (max-width:768px) {
+            padding:300px 0 149px;
+        }
+}
+
+.page__section-title--large{
+    @include font80;
+
+    @media screen and (min-width: 320px) and (max-width:768px) {
+            @include font48 ($txt-color-white);
+        }
+}

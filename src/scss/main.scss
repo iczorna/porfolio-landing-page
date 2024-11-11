@@ -1,0 +1,23 @@
+@import './helpers/index.scss';
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+
+    box-sizing: border-box;
+    max-width:1440px;
+    margin: auto;
+
+    @media screen and (min-width: 769px) and (max-width: 1200px){
+        padding-left:34px;
+        padding-right: 34px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width:768px){
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+        
+    }

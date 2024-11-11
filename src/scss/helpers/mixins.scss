@@ -1,0 +1,40 @@
+@mixin font80 {
+    font-family: DynaPuff;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 96px;
+        text-align: left;
+        color:#FFFFFF;
+}
+
+@mixin font48 ($color){
+        font-family: DynaPuff;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 58px;
+        text-align: left;
+        color:$color;
+}
+
+@mixin card-header ($font-size){
+        font-family: DynaPuff;
+        font-size: $font-size;
+        font-weight: 600;
+        line-height: 48px;
+        text-align: left;
+        color:#565656;
+}
+
+@mixin font16 ($color){
+        font-family: Manrope;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        text-align: left;
+        color:$color;
+}
+
+@mixin flex{
+        display: flex;
+        justify-content: space-between;
+}

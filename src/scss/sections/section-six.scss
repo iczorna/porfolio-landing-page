@@ -1,0 +1,76 @@
+.page__section--six {
+    background-color: $background-black;
+    padding: 78px 0 163px 0;
+
+    @media screen and (min-width: 320px) and (max-width:768px) {
+        padding: 53px 17px 119px 17px;
+    }
+
+}
+
+.section__link-btn {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin: auto;
+    border: 1px solid #F2F2F2;
+    border-radius: 139px;
+    padding: 42px 117px;
+    width: fit-content;
+
+    @media screen and (min-width: 769px) and (max-width: 1200px){
+        padding: 21px 30px;
+        gap: 30px;
+    }
+
+     @media screen and (min-width: 320px) and (max-width:768px) {
+            padding: 12px 15px;
+            gap: 20px;
+            width: calc(100vw - 64px);
+            max-width: 342px;
+        }
+}
+
+
+.link-btn__header {
+    @include font48 ($txt-color-white);
+    margin-bottom: 17px;
+
+    @media screen and (min-width: 320px) and (max-width:768px) {
+            font-size: 18px;
+            line-height: 20px;
+            margin-bottom: 6px;
+        }
+}
+
+.link-btn__txt {
+    @include font16($txt-color-white);
+    font-size: 24px;
+    position: relative;
+
+    @media screen and (min-width: 320px) and (max-width:768px){
+        font-size:15px;
+    }
+
+    &::after {
+        content: url(../images/section6/arrow-horizontal.svg);
+        position: absolute;
+        margin-left: 24px;
+
+    }
+
+    @media screen and (min-width: 320px) and (max-width:768px) {
+        &::after {
+        content: url(../images/section6/arrow_s.svg);
+        top: 3px;
+        margin-left: 12px;
+    }
+}
+}
+
+.link-btn__img{
+    @media screen and (min-width: 320px) and (max-width:768px) {
+            height: 52px;
+            width: 52px;
+        }
+}

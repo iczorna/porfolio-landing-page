@@ -1,0 +1,57 @@
+.footer{
+    background-color: $background-black;
+    display: flex;
+    flex-direction: column;
+    gap:21px;
+    padding-bottom:30px;
+}
+
+.footer__list{
+    display: flex;
+    gap: 37px;
+    margin: auto;
+}
+
+.footer__list-link{
+    height: 20px;
+    width: 18px;
+    display: block;
+}
+
+ .footer__list-item:nth-child(1)>a {
+    background-image: url(../images/footer/msg.svg);
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+
+.footer__list-item:nth-child(2)>a {
+    background-image: url(../images/footer/twitter.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer__list-item:nth-child(3)>a {
+    background-image: url(../images/footer/instagram.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer__list-item:nth-child(4)>a {
+    background-image: url(../images/footer/linkedin.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer-copyright{
+    @include font16($txt-color-white);
+    margin:auto;
+
+    @media screen and (min-width: 320px) and (max-width:768px){
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+
+
+

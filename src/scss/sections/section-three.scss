@@ -1,0 +1,170 @@
+.page__section--three{
+    background:#3C3C3C;
+    padding: 86px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page__section-row--two{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1004px;
+    justify-content: center;
+
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
+        max-width: 663px;
+    }
+}
+
+
+.card--big{
+    background-color: $background-white;
+    padding: 24px 20px;
+    margin-bottom: 63px;
+    border-radius: 24px;
+    width:100%;
+    max-width: 964px;
+
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
+        max-width: 623px;
+    }
+
+        @media screen and (min-width: 320px) and (max-width:768px){
+            width: calc(100vw - 74px);
+            max-width: 456px;
+        }
+}
+
+.card__img--big{
+    height: 498px;
+    background-image: url(../images/section3/main_pic.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 13px;
+    object-fit: cover;
+
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
+        background-image: url(../images/section3/main_pic.svg);
+        background-position:center;
+    }
+
+        @media screen and (min-width: 320px) and (max-width:768px){
+            background-image: url(../images/section3/pic_s.svg);
+            background-position: center;
+            height: 278px;
+        }
+}
+
+.card__img{
+    position: relative;
+    height: 338px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 13px;
+    align-items: center;
+  
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
+        height: 448px;
+    }
+
+        @media screen and (min-width: 320px) and (max-width:768px){
+            height:363px;
+        }
+
+    &::before {
+            content: url(../images/section3/arrow-up.svg);
+            position: absolute;
+            background-color: $background-white;
+            border-radius: 50%;
+            right: 15px;
+            top: 15px;
+    } 
+}
+
+.card:nth-child(1) .card__img{
+    background-image: url(../images/section3/pic1.jpg);
+}
+
+.page__section-row--two>.card:nth-child(2) {
+    @media screen and (min-width: 320px) and (max-width:768px) {
+        flex-grow: 1;
+        max-width: 456px;
+    }
+}
+
+.card:nth-child(2) .card__img {
+    background-image: url(../images/section3/pic2.jpg);
+}
+
+.card:nth-child(3) .card__img {
+    background-image: url(../images/section3/pic3.jpg);
+}
+
+.page__section-row--two>.card:nth-child(1){
+    @media screen and (min-width: 320px) and (max-width:768px) {
+            display: none;
+        }
+}
+
+.card:nth-child(3){
+    @media screen and (min-width: 769px) and (max-width: 1200px){
+        display: none;
+    }
+    @media screen and (min-width: 320px) and (max-width:768px) {
+        display: none;
+    }
+        
+}
+
+.card__img--big{
+
+    position: relative;
+
+    @media screen and (min-width: 769px) and (max-width: 1200px){
+        &::before {
+                content: url(../images/section3/arrow-up.svg);
+                position: absolute;
+                background-color: $background-white;
+                border-radius: 50%;
+                right: 15px;
+                top: 15px;
+            }
+        }
+        @media screen and (min-width: 320px) and (max-width:768px) {
+            &::before {
+                content: url(../images/section3/arrow-up.svg);
+                position: absolute;
+                background-color: $background-white;
+                border-radius: 50%;
+                right: 15px;
+                top: 15px;
+                }
+        }
+    }
+
+
+.card,.card--big{
+
+    background-color: $background-white;
+    padding: 20px;
+    border-radius: 24px;
+    
+}
+
+
+.card__title{
+    @include card-header(24px);
+    line-height: 72px;
+    @media screen and (min-width: 320px) and (max-width:768px){
+        line-height: 35px;
+        margin: 20px 0;
+    }
+}
+
+.card__text{
+    @include font16($txt-color-black);
+}
+

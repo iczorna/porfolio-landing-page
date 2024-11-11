@@ -1,0 +1,23 @@
+.page__section--five{
+    background-image: url(../images/section5/background-horizontal.jpg);
+    background-size: cover;
+    padding: 305px 0 323px 0;
+
+    @media screen and (min-width: 320px) and (max-width:768px) {
+            padding: 180px 16px 173px 16px;
+        }
+}
+
+.page__section-paragraph{
+    @include font48($txt-color-white);
+    text-align: center;
+
+    @media screen and (min-width: 320px) and (max-width:768px) {
+            font-size: 24px;
+            line-height: 29px;
+        }
+}
+
+
+
+
