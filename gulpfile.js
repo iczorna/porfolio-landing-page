@@ -12,7 +12,7 @@ import bsc from "browser-sync";
 const browserSync = bsc.create();
 
 const htmlTaskHandler = () => {
-	return src("./src/*.html").pipe(dest("./build"));
+	return src("./src/*.html").pipe(dest("./docs"));
 };
 
 const cssTaskHandler = () => {
@@ -20,22 +20,22 @@ const cssTaskHandler = () => {
 		.pipe(sass().on("error", sass.logError))
 		.pipe(autoprefixer())
 		.pipe(csso())
-		.pipe(dest("./build/css"))
+		.pipe(dest("./docs/css"))
 		.pipe(browserSync.stream());
 };
 
 const imagesTaskHandler = () => {
 	return src("./src/images/**/*.*")
 		.pipe(imagemin())
-		.pipe(dest("./build/images"));
+		.pipe(dest("./docs/images"));
 };
 
 const fontTaskHandler = () => {
-	return src("./src/font/**/*.*").pipe(dest("./build/fonts"));
+	return src("./src/font/**/*.*").pipe(dest("./docs/fonts"));
 };
 
 const cleanDistTaskHandler = () => {
-	return src("./build", { read: false, allowEmpty: true }).pipe(
+	return src("./docs", { read: false, allowEmpty: true }).pipe(
 		clean({ force: true })
 	);
 };
@@ -43,7 +43,7 @@ const cleanDistTaskHandler = () => {
 const browserSyncTaskHandler = () => {
 	browserSync.init({
 		server: {
-			baseDir: "./build",
+			baseDir: "./docs",
 		}
 	});
 
